@@ -1,6 +1,6 @@
 export default {
     grid: {
-        container: '108px'
+        container: '108rem'
     },
     colors: {
         primary: '#00D2DF',
@@ -10,8 +10,8 @@ export default {
         darken: '#151515'
     },
     gradientColors: {
-        pink: 'background: linear-gradient(270.06deg, #6518B4 0%, #D24074 101.62%)',
-        purple: 'background: linear-gradient(269.96deg, #10D7E2 0%, #9358F7 100%)'
+        pink: 'linear-gradient(270.06deg, #6518B4 0%, #D24074 101.62%)',
+        purple: 'linear-gradient(269.96deg, #10D7E2 0%, #9358F7 100%)'
     },
     font: {
         family: 'Inter, sans-serif',
@@ -29,6 +29,7 @@ export default {
         small: '2.4rem',
         medium: '3.2rem',
         large: '4.0rem',
-        xlarge: '4.8rem'
+        xlarge: '4.8rem',
+        xxlarge: '6.4rem'
     }
 } as const
