@@ -6,21 +6,25 @@ export function Header() {
     return (
         <Wrapper>
             <Content>
-                <h1>Portfólio</h1>
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="/">Experiência</a>
-                    </li>
-                    <li>
-                        <a href="/">Projetos</a>
-                    </li>
-                </ul>
+                <div>
+                    <a>Portfólio</a>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/">Sobre mim</a>
+                        </li>
+                        <li>
+                            <a href="/">Experiência</a>
+                        </li>
+                        <li>
+                            <a href="/">Projetos</a>
+                        </li>
+                    </ul>
+                </nav>
             </Content>
         </Wrapper>
     )

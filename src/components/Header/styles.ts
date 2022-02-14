@@ -1,52 +1,79 @@
-import styled from 'styled-components'
-
-import theme from '../../styles/theme'
+import styled, { css, keyframes } from 'styled-components'
 
 export const Wrapper = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    ${({ theme }) => css`
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    background: ${theme.colors.dark};
-    height: 11rem;
-    width: 100vw;
+        background: ${theme.colors.dark};
+    `}
 `
 
 export const Content = styled.header`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    width: ${theme.grid.container};
-
-    h1 {
-        color: ${theme.colors.primary};
-        font-size: ${theme.font.sizes.xlarge};
-        font-weight: 500;
-        line-height: 2.9rem;
-    }
-
-    ul {
+    ${({ theme }) => css`
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        width: ${theme.grid.container};
+        position: relative;
+        height: 11rem;
 
-        li {
-            list-style: none;
-            padding: 0 ${theme.spacings.xsmall};
+        & ::after {
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color: ${theme.colors.darken};
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: ${animationLine} 1s forwards;
+        }
 
+        div {
             a {
-                color: ${theme.colors.grayLight};
+                color: ${theme.colors.primary};
+                font-size: ${theme.font.sizes.xlarge};
                 font-weight: 500;
-                font-size: ${theme.font.sizes.large};
-                line-height: 22px;
-                text-decoration: none;
-
-                padding: ${theme.spacings.xsmall};
+                line-height: 2.9rem;
+                cursor: pointer;
             }
         }
 
-        & li:last-child {
-            padding-right: 0;
+        nav {
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: calc(${theme.spacings.medium}*2);
+
+                li {
+                    a {
+                        color: ${theme.colors.grayLight};
+                        font-weight: 500;
+                        font-size: ${theme.font.sizes.large};
+                        line-height: 22px;
+
+                        transition: 0.5s;
+
+                        :hover {
+                            color: ${theme.colors.primary};
+                        }
+                    }
+                }
+            }
         }
+    `}
+`
+
+const animationLine = keyframes`
+    from {
+        width: 0%;
+        background-color: #00D2DF;
+    }
+    to {
+        width: 100%;
+        background-color: #151515;
     }
 `
