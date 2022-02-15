@@ -36,6 +36,7 @@ export const Content = styled.div`
 
 export const Projeto = styled.div`
     ${({ theme }) => css`
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.1);
         div.imgProject {
             max-width: 53rem;
             max-height: 20rem;
@@ -78,12 +79,13 @@ export const Projeto = styled.div`
                 max-width: 250px;
                 min-width: 160px;
                 background: transparent;
+                text-align: center;
 
                 border: 2px solid;
                 border-image: ${theme.gradientColors.purple} 10;
                 border-radius: 5px;
 
-                padding: 0.8rem ${theme.spacings.small};
+                padding: 1rem ${theme.spacings.small};
 
                 transition: transform 0.5s;
 

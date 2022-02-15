@@ -64,12 +64,13 @@ export const Content = styled.div`
                 min-width: 160px;
                 background: transparent;
                 gap: ${theme.spacings.small};
+                text-align: center;
 
                 border: 2px solid;
                 border-image: ${theme.gradientColors.pink} 1;
                 border-radius: 5px;
 
-                padding: ${theme.spacings.xsmall} ${theme.spacings.small};
+                padding: 1rem ${theme.spacings.small};
 
                 transition: transform 0.5s;
 

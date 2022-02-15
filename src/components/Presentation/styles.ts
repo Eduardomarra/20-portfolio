@@ -56,13 +56,14 @@ export const WhoIAm = styled.div`
                 max-width: 250px;
                 min-width: 160px;
                 background: transparent;
+                text-align: center;
 
                 border: 2px solid;
                 border-image: ${theme.gradientColors.pink} 1;
                 border-radius: 5px;
 
                 margin: 0 ${theme.spacings.small};
-                padding: ${theme.spacings.xsmall} ${theme.spacings.small};
+                padding: 1rem ${theme.spacings.small};
 
                 transition: transform 0.5s;
 
