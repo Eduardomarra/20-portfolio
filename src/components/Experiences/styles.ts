@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
     ${({ theme }) => css`
-        max-width: ${theme.grid.container};
+        width: ${theme.grid.container};
         display: grid;
         grid-template-columns: 1fr 3fr;
         gap: calc(${theme.spacings.xxlarge}*2);
@@ -57,6 +57,9 @@ export const NavExperiences = styled.div`
             &::before {
                 content: '';
                 background: ${theme.colors.primary};
+            }
+            a {
+                font-weight: 600;
             }
         }
     `}
