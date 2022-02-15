@@ -4,7 +4,8 @@ export const Wrapper = styled.div`
     ${({ theme }) => css`
         background: ${theme.colors.dark};
         height: calc(100vh - 11rem);
-        width: 100vw;
+        max-width: 100vw;
+        overflow: hidden;
 
         display: flex;
         align-items: center;

@@ -5,10 +5,11 @@ export const Wrapper = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100vw;
-        height: 70vh;
+        max-width: 100vw;
+        height: 90vh;
         gap: calc(${theme.spacings.xxlarge}*3);
         background: ${theme.colors.darken};
+        overflow: hidden;
     `}
 `
 

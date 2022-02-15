@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
 
         background: ${theme.colors.dark};
     `}
