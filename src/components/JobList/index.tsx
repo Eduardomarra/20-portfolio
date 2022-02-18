@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { JobDescription } from '../JobDescription'
 
 import { Navigation, NavigationItem } from './styles'
 
@@ -57,6 +58,7 @@ export function JobList() {
                     </NavigationItem>
                 </li>
             </Navigation>
+            <JobDescription />
         </>
     )
 }
