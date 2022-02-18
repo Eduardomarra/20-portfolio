@@ -3,25 +3,22 @@ import styled, { css } from 'styled-components'
 export const Wrapper = styled.div`
     ${({ theme }) => css`
         max-width: 100vw;
-        height: 90vh;
         background: ${theme.colors.dark};
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: calc(${theme.spacings.large} * 3) 0;
     `}
 `
 
 export const Content = styled.div`
     ${({ theme }) => css`
+        display: flex;
+        flex-direction: column;
         width: ${theme.grid.container};
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        gap: calc(${theme.spacings.xxlarge}*2);
-        margin: 0 auto;
     `}
 `
-
-export const NavExperiences = styled.div`
+export const TitleExperience = styled.div`
     ${({ theme }) => css`
         h1 {
             font-weight: 600;
@@ -31,37 +28,14 @@ export const NavExperiences = styled.div`
             color: ${theme.colors.light};
             margin-bottom: ${theme.spacings.xlarge};
         }
-        li {
-            padding: ${theme.spacings.xsmall} ${theme.spacings.large};
-            position: relative;
+    `}
+`
 
-            &::before {
-                content: '';
-                width: 3px;
-                height: 5.4rem;
-                background: ${theme.colors.darken};
-                display: block;
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-            a {
-                font-weight: 300;
-                font-size: ${theme.font.sizes.large};
-                line-height: 2.2rem;
-                color: ${theme.colors.light};
-            }
-        }
-        li.active {
-            background: ${theme.colors.darken};
-            &::before {
-                content: '';
-                background: ${theme.colors.primary};
-            }
-            a {
-                font-weight: 600;
-            }
-        }
+export const NavExperiences = styled.div`
+    ${({ theme }) => css`
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: calc(${theme.spacings.large} * 2);
     `}
 `
 
@@ -89,7 +63,6 @@ export const JobDescription = styled.div`
             margin-bottom: ${theme.spacings.small};
         }
         p {
-            max-width: 60rem;
             font-weight: 300;
             font-size: ${theme.font.sizes.large};
             line-height: 2.8rem;

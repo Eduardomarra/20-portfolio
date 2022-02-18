@@ -1,51 +1,40 @@
 import React from 'react'
 
-import { Wrapper, Content, NavExperiences, JobDescription } from './styles'
+import { JobList } from '../JobList'
+
+import {
+    Wrapper,
+    Content,
+    NavExperiences,
+    JobDescription,
+    TitleExperience
+} from './styles'
 
 export function Experiences() {
     return (
         <>
             <Wrapper>
                 <Content>
-                    <NavExperiences>
+                    <TitleExperience>
                         <h1>Experiência</h1>
-                        <nav>
-                            <ul>
-                                <li className="active">
-                                    <a href="/">Empresa 1</a>
-                                </li>
-                                <li>
-                                    <a href="/">Empresa 2</a>
-                                </li>
-                                <li>
-                                    <a href="/">Empresa 3</a>
-                                </li>
-                                <li>
-                                    <a href="/">Empresa 4</a>
-                                </li>
-                                <li>
-                                    <a href="/">Empresa 5</a>
-                                </li>
-                                <li>
-                                    <a href="/">Empresa 6</a>
-                                </li>
-                            </ul>
-                        </nav>
+                    </TitleExperience>
+                    <NavExperiences>
+                        <JobList />
+                        <JobDescription>
+                            <h1>
+                                Desenvolvedor Front-End
+                                <span>Nov 2021 - Atual</span>
+                            </h1>
+                            <h3>Digital House</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Quisque eu purus risus. Ut
+                                rutrum sollicitudin purus in accumsan. Proin at
+                                mattis metus. Nullam sit amet mauris
+                                condimentum, volutpat augue in, mattis urna.
+                            </p>
+                        </JobDescription>
                     </NavExperiences>
-                    <JobDescription>
-                        <h1>
-                            Desenvolvedor Front-End
-                            <span>Nov 2021 - Atual</span>
-                        </h1>
-                        <h3>Digital House</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Quisque eu purus risus. Ut rutrum sollicitudin
-                            purus in accumsan. Proin at mattis metus. Nullam sit
-                            amet mauris condimentum, volutpat augue in, mattis
-                            urna.
-                        </p>
-                    </JobDescription>
                 </Content>
             </Wrapper>
         </>
