@@ -1,14 +1,9 @@
 import React from 'react'
 
 import { JobList } from '../JobList'
+import { JobDescription } from '../JobDescription'
 
-import {
-    Wrapper,
-    Content,
-    NavExperiences,
-    JobDescription,
-    TitleExperience
-} from './styles'
+import { Wrapper, Content, NavExperiences, TitleExperience } from './styles'
 
 export function Experiences() {
     return (
@@ -20,20 +15,7 @@ export function Experiences() {
                     </TitleExperience>
                     <NavExperiences>
                         <JobList />
-                        <JobDescription>
-                            <h1>
-                                Desenvolvedor Front-End
-                                <span>Nov 2021 - Atual</span>
-                            </h1>
-                            <h3>Digital House</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Quisque eu purus risus. Ut
-                                rutrum sollicitudin purus in accumsan. Proin at
-                                mattis metus. Nullam sit amet mauris
-                                condimentum, volutpat augue in, mattis urna.
-                            </p>
-                        </JobDescription>
+                        <JobDescription />
                     </NavExperiences>
                 </Content>
             </Wrapper>
