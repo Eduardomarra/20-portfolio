@@ -1,23 +1,33 @@
 import React from 'react'
+import { JobData } from '../JobList'
 
-import { Description } from './styles'
+import { Description, Heading, Company, Wrapper } from './styles'
 
-export function JobDescription() {
+type DescriptionProps = {
+    isActive: boolean
+} & JobData
+
+export function JobDescription({
+    role,
+    dateFrom,
+    dateEnd,
+    current,
+    company,
+    description,
+    isActive = false
+}: DescriptionProps) {
     return (
         <>
-            <Description>
-                <h1>
-                    Desenvolvedor Front-End
-                    <span>Nov 2021 - Atual</span>
-                </h1>
-                <h3>Digital House</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque eu purus risus. Ut rutrum sollicitudin purus in
-                    accumsan. Proin at mattis metus. Nullam sit amet mauris
-                    condimentum, volutpat augue in, mattis urna.
-                </p>
-            </Description>
+            <Wrapper isActive={isActive}>
+                <Heading>
+                    <h1>{role}</h1>
+                    <span>
+                        {dateFrom} - {current ? 'Atual' : dateEnd}
+                    </span>
+                </Heading>
+                <Company> {company}</Company>
+                <Description>{description}</Description>
+            </Wrapper>
         </>
     )
 }

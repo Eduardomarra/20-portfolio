@@ -1,33 +1,69 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
-export const Description = styled.div`
+const aminaDescription = keyframes`
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+`
+
+type WrapperProps = {
+    isActive: boolean
+}
+
+export const Wrapper = styled.div<WrapperProps>`
+    ${({ isActive }) => css`
+        display: block;
+        animation: ${aminaDescription} 0.8s ease-in-out;
+
+        ${!isActive &&
+        css`
+            display: none;
+        `}
+    `}
+`
+
+export const Heading = styled.div`
     ${({ theme }) => css`
-        h1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: ${theme.spacings.large};
+        h1,
+        span {
             font-weight: 500;
             font-size: ${theme.font.sizes.xlarge};
             line-height: 2.9rem;
             color: ${theme.colors.light};
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: ${theme.spacings.small};
-
-            span {
-                font-size: ${theme.font.sizes.medium};
-            }
         }
-        h3 {
-            font-weight: 500;
+        span {
             font-size: ${theme.font.sizes.medium};
-            line-height: 2.4rem;
-            color: ${theme.colors.primary};
-            margin-bottom: ${theme.spacings.small};
         }
-        p {
-            font-weight: 300;
-            font-size: ${theme.font.sizes.large};
-            line-height: 2.8rem;
-            color: ${theme.colors.grayLight};
-        }
+    `}
+`
+
+export const Company = styled.p`
+    ${({ theme }) => css`
+        font-weight: 500;
+        font-size: ${theme.font.sizes.medium};
+        line-height: 2.4rem;
+        color: ${theme.colors.primary};
+        margin-bottom: ${theme.spacings.small};
+    `}
+`
+
+export const Description = styled.p`
+    ${({ theme }) => css`
+        font-weight: 300;
+        font-size: ${theme.font.sizes.large};
+        line-height: 2.8rem;
+        color: ${theme.colors.grayLight};
     `}
 `
