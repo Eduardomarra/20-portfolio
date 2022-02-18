@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "role":"Desenvolvedor Front-End",
+        "dateFrom":"Nov 2000",
+        "dateEnd": "Nov 2010",
+        "current":true,
+        "company":"Empresa 1",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna."
+    },
+    {
+        "id": 2,
+        "role":"Desenvolvedor Back-End",
+        "dateFrom":"Dez 2000",
+        "dateEnd": "Nov 2012",
+        "current":false,
+        "company":"Empresa 2",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna."
+    },
+    {
+        "id": 3,
+        "role":"Desenvolvedor Full-Stack",
+        "dateFrom":"Dez 2000",
+        "dateEnd": "Nov 2013",
+        "current":false,
+        "company":"Empresa 3",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna."
+    },
+    {
+        "id": 4,
+        "role":"Analista de Redes",
+        "dateFrom":"Dez 2000",
+        "dateEnd": "Nov 2014",
+        "current":false,
+        "company":"Empresa 4",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna."
+    }
+]
