@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { JobDescription } from '../JobDescription'
 
-import data from '../Json/Data.json'
+import jobs from '../Json/Jobs.json'
 
 import { Navigation, NavigationItem } from './styles'
 
@@ -21,7 +21,7 @@ export function JobList() {
     return (
         <>
             <Navigation>
-                {data.map((job) => (
+                {jobs.map((job) => (
                     <li key={job.id}>
                         <NavigationItem
                             isActive={active === job.id}
@@ -33,7 +33,7 @@ export function JobList() {
                 ))}
             </Navigation>
 
-            {data.map((job: JobData) => (
+            {jobs.map((job: JobData) => (
                 <JobDescription
                     key={job.id}
                     isActive={job.id === active}

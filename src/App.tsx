@@ -3,7 +3,7 @@ import { Apresentation } from './components/Presentation'
 import { Profile } from './components/Profile'
 import { Header } from './components/Header'
 import { Experiences } from './components/Experiences'
-import { Portfolio } from './components/Portfolio'
+import { Project } from './components/Project'
 import { Footer } from './components/Footer'
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
             <Apresentation />
             <Profile />
             <Experiences />
-            <Portfolio />
+            <Project />
             <Footer />
         </>
     )
