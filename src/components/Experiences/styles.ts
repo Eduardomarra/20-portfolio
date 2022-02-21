@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: calc(${theme.spacings.large} * 3) 0;
+        padding: calc(${theme.spacings.large} * 2) 0;
     `}
 `
 

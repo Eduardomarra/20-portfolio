@@ -6,10 +6,9 @@ export const Wrapper = styled.div`
         align-items: center;
         justify-content: center;
         max-width: 100vw;
-        height: 90vh;
         gap: calc(${theme.spacings.xxlarge}*3);
         background: ${theme.colors.darken};
-        overflow: hidden;
+        padding: calc(${theme.spacings.large} * 2) 0;
     `}
 `
 

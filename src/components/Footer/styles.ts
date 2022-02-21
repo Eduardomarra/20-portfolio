@@ -5,7 +5,7 @@ export const Wrapper = styled.footer`
         display: flex;
         align-items: center;
         justify-content: center;
-        background: ${theme.colors.dark};
+        background: ${theme.colors.darken};
     `}
 `
 
