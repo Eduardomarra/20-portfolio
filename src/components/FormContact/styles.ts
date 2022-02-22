@@ -31,23 +31,23 @@ export const Form = styled.div`
         input {
             display: block;
             padding: ${theme.spacings.xsmall};
-            background: ${theme.colors.darken};
+            background: ${theme.colors.light};
             border: none;
-            color: ${theme.colors.grayLight};
+            color: ${theme.colors.darken};
             font-size: ${theme.font.sizes.large};
             outline: none;
             margin-bottom: ${theme.spacings.xsmall};
             &::placeholder {
                 font-size: ${theme.font.sizes.large};
-                color: ${theme.colors.grayLight};
+                color: ${theme.colors.darken};
             }
         }
 
         textarea {
             padding: ${theme.spacings.xsmall};
-            background: ${theme.colors.darken};
+            background: ${theme.colors.light};
             border: none;
-            color: ${theme.colors.grayLight};
+            color: ${theme.colors.darken};
             font-family: 'Inter';
             font-size: ${theme.font.sizes.large};
             outline: none;
@@ -56,7 +56,7 @@ export const Form = styled.div`
 
             &::placeholder {
                 font-size: ${theme.font.sizes.large};
-                color: ${theme.colors.grayLight};
+                color: ${theme.colors.darken};
                 font-family: 'Inter';
             }
         }
