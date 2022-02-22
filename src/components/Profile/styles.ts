@@ -6,14 +6,27 @@ export const Wrapper = styled.div`
         align-items: center;
         justify-content: center;
         max-width: 100vw;
-        gap: calc(${theme.spacings.xxlarge}*3);
+        gap: calc(${theme.spacings.xxlarge} * 3);
         background: ${theme.colors.darken};
         padding: calc(${theme.spacings.large} * 2) 0;
+
+        @media screen and (max-width: 820px) {
+            flex-direction: column;
+            gap: ${theme.spacings.xlarge};
+        }
     `}
 `
 
 export const ImageProfile = styled.div`
     ${({ theme }) => css`
+        @media screen and (max-width: 820px) {
+            width: 250px;
+            height: 250px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
         img {
             border-left: 3px solid ${theme.colors.primary};
             border-radius: 5px;

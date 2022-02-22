@@ -3,7 +3,7 @@ import { JobDescription } from '../JobDescription'
 
 import jobs from '../Json/Jobs.json'
 
-import { Navigation, NavigationItem } from './styles'
+import { Content, Navigation, NavigationItem } from './styles'
 
 export type JobData = {
     id: number
@@ -19,7 +19,7 @@ export function JobList() {
     const [active, setActive] = useState(1)
 
     return (
-        <>
+        <Content>
             <Navigation>
                 {jobs.map((job) => (
                     <li key={job.id}>
@@ -32,14 +32,15 @@ export function JobList() {
                     </li>
                 ))}
             </Navigation>
-
-            {jobs.map((job: JobData) => (
-                <JobDescription
-                    key={job.id}
-                    isActive={job.id === active}
-                    {...job}
-                />
-            ))}
-        </>
+            <div>
+                {jobs.map((job: JobData) => (
+                    <JobDescription
+                        key={job.id}
+                        isActive={job.id === active}
+                        {...job}
+                    />
+                ))}
+            </div>
+        </Content>
     )
 }

@@ -46,6 +46,18 @@ export const Heading = styled.div`
         span {
             font-size: ${theme.font.sizes.medium};
         }
+
+        @media screen and (max-width: 820px) {
+            margin-bottom: ${theme.spacings.small};
+            h1 {
+                font-weight: 500;
+                font-size: ${theme.font.sizes.large};
+                line-height: 2.4rem;
+            }
+            span {
+                font-size: 1.2rem;
+            }
+        }
     `}
 `
 
@@ -56,6 +68,10 @@ export const Company = styled.p`
         line-height: 2.4rem;
         color: ${theme.colors.primary};
         margin-bottom: ${theme.spacings.small};
+
+        @media screen and (max-width: 820px) {
+            font-size: 1.4rem;
+        }
     `}
 `
 
@@ -65,5 +81,9 @@ export const Description = styled.p`
         font-size: ${theme.font.sizes.large};
         line-height: 2.8rem;
         color: ${theme.colors.grayLight};
+
+        @media screen and (max-width: 820px) {
+            font-size: ${theme.font.sizes.small};
+        }
     `}
 `

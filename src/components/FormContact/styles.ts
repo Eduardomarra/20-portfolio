@@ -12,6 +12,10 @@ export const Content = styled.div`
     ${({ theme }) => css`
         width: ${theme.grid.container};
         padding: ${theme.spacings.xlarge} 0;
+
+        @media screen and (max-width: 820px) {
+            width: 700px;
+        }
     `}
 `
 export const Title = styled.div`

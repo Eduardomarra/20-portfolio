@@ -19,6 +19,14 @@ export const Content = styled.div`
         gap: ${theme.spacings.xsmall};
         margin: ${theme.spacings.xxlarge} 0;
 
+        @media screen and (max-width: 820px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 700px;
+        }
+
         h1 {
             font-weight: 600;
             font-size: ${theme.font.sizes.xlarge};

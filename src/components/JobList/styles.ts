@@ -6,6 +6,14 @@ type NavigationItemProps = {
     isActive: boolean
 }
 
+export const Content = styled.div`
+    ${({ theme }) => css`
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: ${theme.spacings.xxlarge};
+    `}
+`
+
 export const NavigationItem = styled.button<NavigationItemProps>`
     ${({ theme, isActive }) => css`
         display: block;

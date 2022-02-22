@@ -16,6 +16,10 @@ export const Content = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-start;
+
+        @media screen and (max-width: 820px) {
+            width: 700px;
+        }
         p {
             font-weight: normal;
             font-size: ${theme.font.sizes.medium};

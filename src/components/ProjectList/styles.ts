@@ -12,12 +12,15 @@ export const Projeto = styled.div`
         }
         p {
             width: 100%;
-
             font-weight: 300;
             font-size: ${theme.font.sizes.medium};
             line-height: 2.6rem;
             color: ${theme.colors.grayLight};
             margin-bottom: ${theme.spacings.small};
+
+            @media screen and (max-width: 820px) {
+                width: 500px;
+            }
         }
         h5 {
             font-weight: 500;

@@ -13,6 +13,11 @@ export const Wrapper = styled.div`
 
         position: relative;
         overflow: hidden;
+
+        @media screen and (max-width: 820px) {
+            height: auto;
+            padding: ${theme.spacings.xxlarge} 0;
+        }
     `}
 `
 
@@ -23,6 +28,11 @@ export const Content = styled.main`
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media screen and (max-width: 820px) {
+            width: 700px;
+            flex-direction: column;
+        }
     `}
 `
 
@@ -68,8 +78,16 @@ export const Vetor = styled.div`
 
     transition: animation 5s;
 
+    @media screen and (max-width: 820px) {
+        display: none;
+    }
+
     &:hover {
         animation: ${Animatevetor} 0.5s ease-in forwards;
+
+        @media screen and (max-width: 820px) {
+            animation: none;
+        }
     }
 
     img {

@@ -1,15 +1,15 @@
 import React from 'react'
 
-import { Wrapper, Content } from './styles'
+import { Wrapper, Content, Logo, Navigation } from './styles'
 
 export function Header() {
     return (
         <Wrapper id="home">
             <Content>
-                <div>
+                <Logo>
                     <a>Portfólio</a>
-                </div>
-                <nav>
+                </Logo>
+                <Navigation>
                     <ul>
                         <li>
                             <a href="#home">Home</a>
@@ -27,7 +27,7 @@ export function Header() {
                             <a href="#contato">Contato</a>
                         </li>
                     </ul>
-                </nav>
+                </Navigation>
             </Content>
         </Wrapper>
     )

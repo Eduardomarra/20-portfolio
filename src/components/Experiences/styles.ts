@@ -16,6 +16,10 @@ export const Content = styled.div`
         display: flex;
         flex-direction: column;
         width: ${theme.grid.container};
+
+        @media screen and (max-width: 820px) {
+            width: 700px;
+        }
     `}
 `
 export const TitleExperience = styled.div`
@@ -27,6 +31,12 @@ export const TitleExperience = styled.div`
             text-transform: uppercase;
             color: ${theme.colors.light};
             margin-bottom: ${theme.spacings.xlarge};
+
+            @media screen and (max-width: 820px) {
+                font-weight: 500;
+                font-size: ${theme.font.sizes.large};
+                line-height: 2.4rem;
+            }
         }
     `}
 `
