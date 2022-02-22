@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
     `}
 `
 
-export const Main = styled.main`
+export const Content = styled.main`
     ${({ theme }) => css`
         width: ${theme.grid.container};
         margin: 0 auto;
@@ -26,7 +26,7 @@ export const Main = styled.main`
     `}
 `
 
-export const WhoIAm = styled.div`
+export const About = styled.div`
     ${({ theme }) => css`
         span {
             color: ${theme.colors.light};
@@ -44,53 +44,16 @@ export const WhoIAm = styled.div`
             text-transform: uppercase;
             padding: ${theme.spacings.small} 0;
         }
+    `}
+`
 
-        div {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-
-            margin-top: ${theme.spacings.xxlarge};
-
-            a {
-                max-width: 250px;
-                min-width: 160px;
-                background: transparent;
-                text-align: center;
-
-                border: 2px solid;
-                border-image: ${theme.gradientColors.pink} 1;
-                border-radius: 5px;
-
-                margin: 0 ${theme.spacings.small};
-                padding: 1rem ${theme.spacings.small};
-
-                transition: transform 0.5s;
-
-                display: inline-block;
-
-                :nth-child(1) {
-                    border-image: ${theme.gradientColors.purple} 1;
-                }
-
-                :hover {
-                    transform: scale(1.1);
-                }
-
-                img {
-                    margin-right: ${theme.spacings.xsmall};
-                    height: 20px;
-                }
-
-                p {
-                    color: ${theme.colors.light};
-                    text-decoration: none;
-                    line-height: ${theme.font.sizes.xlarge};
-                    text-align: center;
-                    display: inline-block;
-                }
-            }
-        }
+export const ButtonWrapper = styled.div`
+    ${({ theme }) => css`
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: ${theme.spacings.medium};
+        margin-top: ${theme.spacings.xxlarge};
     `}
 `
 

@@ -4,7 +4,7 @@ import { Wrapper, Content } from './styles'
 
 export function Header() {
     return (
-        <Wrapper>
+        <Wrapper id="home">
             <Content>
                 <div>
                     <a>Portfólio</a>
@@ -12,16 +12,19 @@ export function Header() {
                 <nav>
                     <ul>
                         <li>
-                            <a href="/">Home</a>
+                            <a href="#home">Home</a>
                         </li>
                         <li>
-                            <a href="/">Sobre mim</a>
+                            <a href="#sobreMim">Sobre mim</a>
                         </li>
                         <li>
-                            <a href="/">Experiência</a>
+                            <a href="#experiencia">Experiência</a>
                         </li>
                         <li>
-                            <a href="/">Projetos</a>
+                            <a href="#projetos">Projetos</a>
+                        </li>
+                        <li>
+                            <a href="#contato">Contato</a>
                         </li>
                     </ul>
                 </nav>

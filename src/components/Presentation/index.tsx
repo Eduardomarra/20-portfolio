@@ -1,34 +1,40 @@
 import React from 'react'
-import { Wrapper, Main, WhoIAm, Vetor } from './styles'
+import { FiLinkedin, FiGithub } from 'react-icons/fi'
+import { Button } from '../Button'
 
 import vetor from '../../assets/vetor.svg'
-import linkedin from '../../assets/linkedin.svg'
-import github from '../../assets/github.svg'
+
+import { Wrapper, Content, About, Vetor, ButtonWrapper } from './styles'
 
 export function Apresentation() {
     return (
         <Wrapper>
-            <Main>
-                <WhoIAm>
+            <Content>
+                <About>
                     <span>Olá, eu sou</span>
                     <h1>Eduado Marra</h1>
                     <span>Desenvolvedor Front-End</span>
 
-                    <div>
-                        <a href="/">
-                            <img src={linkedin} />
-                            <p>Linkedin</p>
-                        </a>
-                        <a href="/">
-                            <img src={github} />
-                            <p>GitHub</p>
-                        </a>
-                    </div>
-                </WhoIAm>
+                    <ButtonWrapper>
+                        <Button
+                            gradientStyle="purple"
+                            href="https://www.linkedin.com/in/eduardomarra/"
+                            target="_blank"
+                        >
+                            <FiLinkedin /> Linkedin
+                        </Button>
+                        <Button
+                            href="https://www.linkedin.com/in/eduardomarra/"
+                            target="_blank"
+                        >
+                            <FiGithub /> GitHub
+                        </Button>
+                    </ButtonWrapper>
+                </About>
                 <Vetor>
                     <img src={vetor} />
                 </Vetor>
-            </Main>
+            </Content>
         </Wrapper>
     )
 }

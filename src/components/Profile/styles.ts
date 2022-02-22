@@ -55,48 +55,24 @@ export const Content = styled.div`
             justify-content: flex-start;
             gap: ${theme.spacings.xxlarge};
             margin: ${theme.spacings.xlarge} 0;
-        }
 
-        .archives {
             a {
-                max-width: 250px;
-                min-width: 160px;
-                background: transparent;
-                gap: ${theme.spacings.small};
-                text-align: center;
-
-                border: 2px solid;
-                border-image: ${theme.gradientColors.pink} 1;
-                border-radius: 5px;
-
-                padding: 1rem ${theme.spacings.small};
-
-                transition: transform 0.5s;
-
-                display: inline-block;
-
-                :nth-child(1) {
-                    border-image: ${theme.gradientColors.purple} 1;
-                    margin-right: ${theme.spacings.xlarge};
-                }
-
-                :hover {
-                    transform: scale(1.1);
-                }
-
                 img {
-                    margin-right: ${theme.spacings.xsmall};
-                    height: 20px;
-                }
-
-                p {
-                    color: ${theme.colors.light};
-                    text-decoration: none;
-                    line-height: ${theme.font.sizes.xlarge};
-                    text-align: center;
-                    display: inline-block;
+                    transition: transform 0.5s;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
                 }
             }
         }
+    `}
+`
+
+export const ButtonWrapper = styled.div`
+    ${({ theme }) => css`
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: ${theme.spacings.xlarge};
     `}
 `

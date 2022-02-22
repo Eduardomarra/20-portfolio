@@ -1,13 +1,13 @@
 import React from 'react'
-import { Wrapper, Content, ImageProfile } from './styles'
+import { Wrapper, Content, ImageProfile, ButtonWrapper } from './styles'
 
 import photoProfile from '../../assets/photoProfile.jpg'
 import twitter from '../../assets/twitter.svg'
 import twitch from '../../assets/twitch.svg'
 import youtube from '../../assets/youtube.svg'
 import facebook from '../../assets/facebook.svg'
-import downloadCloud from '../../assets/downloadCloud.svg'
-import mail from '../../assets/mail.svg'
+import { Button } from '../Button'
+import { FiMail, FiDownloadCloud } from 'react-icons/fi'
 
 export function Profile() {
     return (
@@ -53,16 +53,21 @@ export function Profile() {
                             </li>
                         </ul>
                     </div>
-                    <div className="archives">
-                        <a href="/">
-                            <img src={downloadCloud} />
-                            <p>Currículo</p>
-                        </a>
-                        <a href="/">
-                            <img src={mail} />
-                            <p>E-mail</p>
-                        </a>
-                    </div>
+                    <ButtonWrapper>
+                        <Button
+                            gradientStyle="purple"
+                            href="https://www.linkedin.com/in/eduardomarra/"
+                            target="_blank"
+                        >
+                            <FiDownloadCloud /> Currículo
+                        </Button>
+                        <Button
+                            href="https://www.linkedin.com/in/eduardomarra/"
+                            target="_blank"
+                        >
+                            <FiMail /> E-mail
+                        </Button>
+                    </ButtonWrapper>
                 </Content>
             </Wrapper>
         </>

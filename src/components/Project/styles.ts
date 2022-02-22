@@ -16,9 +16,6 @@ export const Content = styled.div`
         width: ${theme.grid.container};
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        /* align-items: center;
-    justify-content: space-between; */
-        flex-wrap: wrap;
         gap: ${theme.spacings.xsmall};
         margin: ${theme.spacings.xxlarge} 0;
 
