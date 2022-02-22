@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
 export const Wrapper = styled.div`
     ${({ theme }) => css`
@@ -57,9 +57,20 @@ export const ButtonWrapper = styled.div`
     `}
 `
 
+const Animatevetor = keyframes`
+    0%{transform: rotate(0) scale(1);}
+    100%{transform: translateX(-20rem) scale(1.5);}
+`
+
 export const Vetor = styled.div`
     position: absolute;
     right: 0;
+
+    transition: animation 5s;
+
+    &:hover {
+        animation: ${Animatevetor} 0.5s ease-in forwards;
+    }
 
     img {
         height: 95%;
