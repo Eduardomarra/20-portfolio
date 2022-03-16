@@ -74,5 +74,9 @@ export const ButtonSubmit = styled.button`
         color: ${theme.colors.light};
         background: ${theme.gradientColors.purple};
         padding: ${theme.spacings.xsmall};
+
+        &:hover {
+            filter: brightness(0.9);
+        }
     `}
 `
