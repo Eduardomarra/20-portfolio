@@ -2,12 +2,14 @@ import React from 'react'
 
 import { Wrapper, Content, Logo, Navigation } from './styles'
 
+import logo from '../../assets/logo.svg'
+
 export function Header() {
     return (
         <Wrapper id="home">
             <Content>
                 <Logo>
-                    <a>Portfólio</a>
+                    <img src={logo} alt="Logo Eduardo Marra" />
                 </Logo>
                 <Navigation>
                     <ul>
