@@ -7,7 +7,7 @@ import { Wrapper, Content, NavExperiences, TitleExperience } from './styles'
 export function Experiences() {
     return (
         <>
-            <Wrapper>
+            <Wrapper id="experiencia">
                 <Content>
                     <TitleExperience>
                         <h1>Experiência</h1>

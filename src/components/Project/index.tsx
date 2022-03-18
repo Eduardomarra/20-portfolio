@@ -14,7 +14,7 @@ export type ProjectListProps = {
 export function Project() {
     return (
         <>
-            <Wrapper>
+            <Wrapper id="projetos">
                 <Content>
                     <h1>Projetos</h1>
                 </Content>

@@ -5,7 +5,7 @@ import { Wrapper, Content, Title, Form, ButtonSubmit } from './styles'
 export function FormContact() {
     return (
         <>
-            <Wrapper>
+            <Wrapper id="contato">
                 <Content>
                     <Title>Entre em contato!</Title>
                     <Form>

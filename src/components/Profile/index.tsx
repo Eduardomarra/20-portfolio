@@ -12,7 +12,7 @@ import { FiMail, FiDownloadCloud } from 'react-icons/fi'
 export function Profile() {
     return (
         <>
-            <Wrapper>
+            <Wrapper id="sobreMim">
                 <ImageProfile>
                     <img src={photoProfile} />
                 </ImageProfile>
