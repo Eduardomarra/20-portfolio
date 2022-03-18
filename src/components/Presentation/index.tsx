@@ -12,7 +12,7 @@ export function Apresentation() {
             <Content>
                 <About>
                     <span>Olá, eu sou</span>
-                    <h1>Eduado Marra</h1>
+                    <h1>Eduardo Marra</h1>
                     <span>Desenvolvedor Front-End</span>
 
                     <ButtonWrapper>
