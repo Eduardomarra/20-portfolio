@@ -30,7 +30,7 @@ export const TitleExperience = styled.div`
             line-height: 2.9rem;
             text-transform: uppercase;
             color: ${theme.colors.light};
-            margin-bottom: ${theme.spacings.xlarge};
+            margin: ${theme.spacings.xlarge} 0 ${theme.spacings.xlarge} 0;
 
             @media screen and (max-width: 820px) {
                 font-weight: 500;

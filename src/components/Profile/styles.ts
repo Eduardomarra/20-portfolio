@@ -43,7 +43,7 @@ export const Content = styled.div`
                 line-height: 2.9rem;
                 text-transform: uppercase;
                 color: ${theme.colors.light};
-                margin-bottom: 4rem;
+                margin: 4rem 0;
             }
             h3 {
                 font-weight: 500;

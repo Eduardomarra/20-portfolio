@@ -6,7 +6,11 @@ export const Wrapper = styled.div`
         align-items: center;
         justify-content: center;
         overflow: hidden;
-
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        right: 0;
+        left: 0;
         background: ${theme.colors.dark};
     `}
 `
@@ -18,8 +22,9 @@ export const Content = styled.header`
         justify-content: space-between;
         width: ${theme.grid.container};
         position: relative;
-        height: 11rem;
+        height: 9rem;
         padding: 0 ${theme.spacings.small};
+        transition: all 0.3s;
 
         @media screen and (max-width: 820px) {
             width: 700px;

@@ -41,9 +41,15 @@ export const Form = styled.div`
             font-size: ${theme.font.sizes.large};
             outline: none;
             margin-bottom: ${theme.spacings.xsmall};
+
             &::placeholder {
                 font-size: ${theme.font.sizes.large};
                 color: ${theme.colors.darken};
+                opacity: 0.5;
+            }
+
+            &:focus::placeholder {
+                opacity: 0;
             }
         }
 
@@ -62,6 +68,10 @@ export const Form = styled.div`
                 font-size: ${theme.font.sizes.large};
                 color: ${theme.colors.darken};
                 font-family: 'Inter';
+                opacity: 0.5;
+            }
+            &:focus::placeholder {
+                opacity: 0;
             }
         }
     `}

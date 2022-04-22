@@ -17,7 +17,7 @@ export const Content = styled.div`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: ${theme.spacings.xsmall};
-        margin: ${theme.spacings.xxlarge} 0;
+        margin: ${theme.spacings.xlarge} 0;
 
         @media screen and (max-width: 820px) {
             display: flex;
@@ -34,7 +34,8 @@ export const Content = styled.div`
             text-transform: uppercase;
             color: ${theme.colors.light};
             align-self: flex-start;
-            margin-bottom: -3rem;
+            margin-top: ${theme.spacings.xxlarge};
+            margin-bottom: -4rem;
         }
     `}
 `

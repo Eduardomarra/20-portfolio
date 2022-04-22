@@ -21,11 +21,9 @@ const GlobalStyles = createGlobalStyle`
             background: none;
             border: none;
         }
-
         ul {
             list-style: none;
         }
-
         a {
             text-decoration: none;
         }
