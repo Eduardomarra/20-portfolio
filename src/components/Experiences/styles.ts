@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div`
     ${({ theme }) => css`
-        max-width: 100vw;
+        height: 100vh;
         background: ${theme.colors.dark};
         display: flex;
         align-items: center;

@@ -3,7 +3,7 @@ import styled, { css, keyframes } from 'styled-components'
 export const Wrapper = styled.div`
     ${({ theme }) => css`
         background: ${theme.colors.dark};
-        height: calc(100vh - 11rem);
+        height: 100vh;
         max-width: 100vw;
         overflow: hidden;
 
@@ -38,6 +38,7 @@ export const Content = styled.main`
 
 export const About = styled.div`
     ${({ theme }) => css`
+        animation: ${about} 1s forwards;
         span {
             color: ${theme.colors.light};
             font-size: ${theme.font.sizes.xlarge};
@@ -56,6 +57,16 @@ export const About = styled.div`
         }
     `}
 `
+const about = keyframes`
+    from {
+        opacity: 0;
+        transform: translateX(-100rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+`
 
 export const ButtonWrapper = styled.div`
     ${({ theme }) => css`
@@ -67,27 +78,26 @@ export const ButtonWrapper = styled.div`
     `}
 `
 
-const Animatevetor = keyframes`
-    0%{transform: rotate(0) scale(1);}
-    100%{transform: translateX(-20rem) scale(1.5);}
+const vetor = keyframes`
+    from {
+        opacity: 0;
+        right: -100rem;
+    }
+    to {
+        opacity: 1;
+        right: 0;
+    }
 `
 
 export const Vetor = styled.div`
     position: absolute;
     right: 0;
-
     transition: animation 5s;
+    opacity: 0;
+    animation: ${vetor} 0.5s 0.5s forwards;
 
     @media screen and (max-width: 820px) {
         display: none;
-    }
-
-    &:hover {
-        animation: ${Animatevetor} 0.5s ease-in forwards;
-
-        @media screen and (max-width: 820px) {
-            animation: none;
-        }
     }
 
     img {

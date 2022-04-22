@@ -2,9 +2,12 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.footer`
     ${({ theme }) => css`
+        position: absolute;
+        bottom: 0;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100vw;
         background: ${theme.colors.darken};
     `}
 `

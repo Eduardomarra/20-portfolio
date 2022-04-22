@@ -3,14 +3,13 @@ import React from 'react'
 import { Wrapper, Content } from './styles'
 
 export function Footer() {
-    const date = new Date()
-    const year = date.getFullYear()
+    const date = new Date().getFullYear()
 
     return (
         <>
             <Wrapper>
                 <Content>
-                    <p>@ {year} - Eduardo Marra</p>
+                    <p>@ {date} - Eduardo Marra</p>
                     <p>
                         Design criado por
                         <a

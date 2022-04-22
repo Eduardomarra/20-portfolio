@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
         align-items: center;
         justify-content: center;
         max-width: 100vw;
+        height: 100vh;
         gap: calc(${theme.spacings.xxlarge} * 3);
         background: ${theme.colors.darken};
         padding: calc(${theme.spacings.large} * 2) 0;
@@ -43,7 +44,7 @@ export const Content = styled.div`
                 line-height: 2.9rem;
                 text-transform: uppercase;
                 color: ${theme.colors.light};
-                margin: 4rem 0;
+                margin-bottom: 4rem;
             }
             h3 {
                 font-weight: 500;

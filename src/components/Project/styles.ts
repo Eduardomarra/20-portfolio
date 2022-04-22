@@ -3,11 +3,11 @@ import styled, { css } from 'styled-components'
 export const Wrapper = styled.div`
     ${({ theme }) => css`
         background: ${theme.colors.darken};
-        max-width: 100vw;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        min-height: 100vh;
     `}
 `
 

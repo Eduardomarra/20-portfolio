@@ -8,8 +8,8 @@ import { Wrapper, Content, About, Vetor, ButtonWrapper } from './styles'
 
 export function Apresentation() {
     return (
-        <Wrapper>
-            <Content>
+        <Wrapper id="presentation">
+            <Content id="home">
                 <About>
                     <span>Olá, eu sou</span>
                     <h1>Eduardo Marra</h1>
