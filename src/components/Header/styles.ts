@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
         right: 0;
         left: 0;
         background: ${theme.colors.dark};
+        animation: ${header} 1s forwards;
     `}
 `
 
@@ -94,5 +95,15 @@ const animationLine = keyframes`
     to {
         width: 100%;
         background-color: #151515;
+    }
+`
+const header = keyframes`
+    from {
+        opacity: 0;
+        top: -50rem;
+    }
+    to {
+        opacity: 1;
+        top: 0;
     }
 `
