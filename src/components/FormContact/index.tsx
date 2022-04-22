@@ -1,5 +1,4 @@
 import React from 'react'
-import { Footer } from '../Footer'
 
 import { Wrapper, Content, Title, Form, ButtonSubmit } from './styles'
 
@@ -20,7 +19,6 @@ export function FormContact() {
                     </Form>
                     <ButtonSubmit>Encaminhar</ButtonSubmit>
                 </Content>
-                <Footer />
             </Wrapper>
         </>
     )

@@ -25,6 +25,12 @@ export const Content = styled.div`
             justify-content: center;
             flex-wrap: wrap;
             width: 700px;
+            margin: 0 calc(${theme.spacings.xsmall} / 2);
+        }
+        @media screen and (max-width: 500px) {
+            display: grid;
+            grid-template-columns: auto;
+            margin: 0 1rem;
         }
 
         h1 {

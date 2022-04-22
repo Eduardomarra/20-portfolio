@@ -17,10 +17,6 @@ export const Projeto = styled.div`
             line-height: 2.6rem;
             color: ${theme.colors.grayLight};
             margin-bottom: ${theme.spacings.small};
-
-            @media screen and (max-width: 820px) {
-                width: 500px;
-            }
         }
         h5 {
             font-weight: 500;
@@ -28,6 +24,10 @@ export const Projeto = styled.div`
             line-height: 2.4rem;
             color: ${theme.colors.primary};
             margin-bottom: ${theme.spacings.small};
+        }
+
+        @media screen and (max-width: 500px) {
+            max-width: 100vw;
         }
     `}
 `
@@ -43,6 +43,11 @@ export const Image = styled.div`
             height: 100%;
             border-left: 3px solid ${theme.colors.primary};
             border-radius: 5px;
+        }
+
+        @media screen and (max-width: 500px) {
+            max-width: 100vw;
+            height: 15rem;
         }
     `}
 `

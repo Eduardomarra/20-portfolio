@@ -2,8 +2,6 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.footer`
     ${({ theme }) => css`
-        position: absolute;
-        bottom: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -22,6 +20,13 @@ export const Content = styled.div`
 
         @media screen and (max-width: 820px) {
             width: 700px;
+        }
+        @media screen and (max-width: 500px) {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin: 0 0.8px;
+            width: 100vw;
         }
         p {
             font-weight: normal;

@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
         align-items: center;
         justify-content: center;
         padding: calc(${theme.spacings.large} * 2) 0;
+
+        @media screen and (max-width: 500px) {
+            height: auto;
+        }
     `}
 `
 
@@ -16,10 +20,6 @@ export const Content = styled.div`
         display: flex;
         flex-direction: column;
         width: ${theme.grid.container};
-
-        @media screen and (max-width: 820px) {
-            width: 700px;
-        }
     `}
 `
 export const TitleExperience = styled.div`

@@ -5,9 +5,8 @@ export const Wrapper = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
         position: fixed;
-        z-index: 99;
+        z-index: 5;
         top: 0;
         right: 0;
         left: 0;
@@ -21,14 +20,37 @@ export const Content = styled.header`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-direction: row;
         width: ${theme.grid.container};
         position: relative;
         height: 9rem;
-        padding: 0 ${theme.spacings.small};
         transition: all 0.3s;
+        margin: 0 calc(${theme.spacings.xsmall} / 2);
 
-        @media screen and (max-width: 820px) {
-            width: 700px;
+        .menu {
+        }
+        @media screen and (min-width: 760px) {
+            .desktop {
+                display: flex;
+            }
+            .mobile {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 759px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .desktop {
+                display: none;
+            }
+            .mobile {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            width: 95vw;
         }
 
         & ::after {
@@ -41,47 +63,9 @@ export const Content = styled.header`
             bottom: 0;
             left: 0;
             animation: ${animationLine} 1s forwards;
-        }
-    `}
-`
 
-export const Logo = styled.div`
-    ${({ theme }) => css`
-        a {
-            color: ${theme.colors.primary};
-            font-size: ${theme.font.sizes.xlarge};
-            font-weight: 500;
-            line-height: 2.9rem;
-            cursor: pointer;
-        }
-    `}
-`
-
-export const Navigation = styled.nav`
-    ${({ theme }) => css`
-        ul {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: calc(${theme.spacings.medium}*2);
-
-            @media screen and (max-width: 820px) {
-                gap: ${theme.spacings.medium};
-            }
-
-            li {
-                a {
-                    color: ${theme.colors.grayLight};
-                    font-weight: 500;
-                    font-size: ${theme.font.sizes.large};
-                    line-height: 22px;
-
-                    transition: 0.5s;
-
-                    :hover {
-                        color: ${theme.colors.primary};
-                    }
-                }
+            @media screen and (max-width: 759px) {
+                content: none;
             }
         }
     `}

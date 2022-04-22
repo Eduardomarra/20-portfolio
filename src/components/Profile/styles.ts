@@ -11,23 +11,25 @@ export const Wrapper = styled.div`
         background: ${theme.colors.darken};
         padding: calc(${theme.spacings.large} * 2) 0;
 
-        @media screen and (max-width: 820px) {
+        @media screen and (max-width: 759px) {
             flex-direction: column;
-            gap: ${theme.spacings.xlarge};
+            height: auto;
         }
     `}
 `
 
 export const ImageProfile = styled.div`
     ${({ theme }) => css`
-        @media screen and (max-width: 820px) {
-            width: 250px;
-            height: 250px;
+        @media screen and (max-width: 759px) {
+            width: 200px;
+            height: 200px;
+
             img {
                 width: 100%;
                 height: 100%;
             }
         }
+
         img {
             border-left: 3px solid ${theme.colors.primary};
             border-radius: 5px;
@@ -37,6 +39,9 @@ export const ImageProfile = styled.div`
 
 export const Content = styled.div`
     ${({ theme }) => css`
+        @media screen and (max-width: 759px) {
+            margin: 0 calc(${theme.spacings.xsmall} / 2);
+        }
         .profile {
             h1 {
                 font-weight: 600;
@@ -60,6 +65,26 @@ export const Content = styled.div`
                 line-height: 3.2rem;
                 color: ${theme.colors.grayLight};
                 max-width: 540px;
+            }
+
+            @media screen and (max-width: 759px) {
+                h1 {
+                    font-size: ${theme.font.sizes.large};
+                    line-height: 2.2rem;
+                    margin-bottom: 3rem;
+                    text-align: center;
+                    margin-top: 2rem;
+                }
+                h3 {
+                    font-size: ${theme.font.sizes.medium};
+                    line-height: 1.8rem;
+                    margin-bottom: 2rem;
+                }
+                p {
+                    font-size: ${theme.font.sizes.small};
+                    line-height: 2.5rem;
+                    max-width: 540px;
+                }
             }
         }
 

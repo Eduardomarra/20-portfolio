@@ -13,11 +13,6 @@ export const Wrapper = styled.div`
 
         position: relative;
         overflow: hidden;
-
-        @media screen and (max-width: 820px) {
-            height: auto;
-            padding: ${theme.spacings.xxlarge} 0;
-        }
     `}
 `
 
@@ -28,23 +23,31 @@ export const Content = styled.main`
         display: flex;
         align-items: center;
         justify-content: space-between;
-
-        @media screen and (max-width: 820px) {
-            width: 700px;
-            flex-direction: column;
-        }
     `}
 `
 
 export const About = styled.div`
     ${({ theme }) => css`
         animation: ${about} 1s forwards;
+        z-index: 2;
+
+        @media screen and (max-width: 759px) {
+            margin-top: 10rem;
+            padding: 0 calc(1.6rem / 2);
+        }
+
         span {
             color: ${theme.colors.light};
             font-size: ${theme.font.sizes.xlarge};
             font-weight: 600;
             line-height: 2.9rem;
             text-transform: uppercase;
+
+            @media screen and (max-width: 759px) {
+                font-size: ${theme.font.sizes.small};
+                font-weight: 600;
+                line-height: 1.6rem;
+            }
         }
 
         h1 {
@@ -54,6 +57,12 @@ export const About = styled.div`
             line-height: 7.7rem;
             text-transform: uppercase;
             padding: ${theme.spacings.small} 0;
+
+            @media screen and (max-width: 759px) {
+                font-size: ${theme.font.sizes.xxlarge};
+                font-weight: 600;
+                line-height: 1.6rem;
+            }
         }
     `}
 `
@@ -95,12 +104,13 @@ export const Vetor = styled.div`
     transition: animation 5s;
     opacity: 0;
     animation: ${vetor} 0.5s 0.5s forwards;
-
-    @media screen and (max-width: 820px) {
-        display: none;
-    }
+    z-index: 1;
 
     img {
         height: 95%;
+    }
+
+    @media screen and (max-width: 759px) {
+        opacity: 0.5;
     }
 `

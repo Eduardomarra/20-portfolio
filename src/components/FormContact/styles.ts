@@ -10,6 +10,10 @@ export const Wrapper = styled.div`
         height: 100vh;
         position: relative;
         overflow: hidden;
+
+        @media screen and (max-width: 400px) {
+            height: 80vh;
+        }
     `}
 `
 export const Content = styled.div`
@@ -19,6 +23,15 @@ export const Content = styled.div`
 
         @media screen and (max-width: 820px) {
             width: 700px;
+        }
+        @media screen and (max-width: 500px) {
+            height: 80vh;
+            width: 95vw;
+            margin: 0 calc(${theme.spacings.small} / 2);
+        }
+        @media screen and (max-width: 400px) {
+            width: 95vw;
+            margin: 0 calc(${theme.spacings.small} / 2);
         }
     `}
 `
@@ -34,7 +47,7 @@ export const Title = styled.div`
 export const Form = styled.div`
     ${({ theme }) => css`
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
 
         input {
             display: block;
@@ -91,6 +104,10 @@ export const ButtonSubmit = styled.button`
 
         &:hover {
             filter: brightness(0.9);
+        }
+
+        @media screen and (max-width: 500px) {
+            margin-bottom: 3rem;
         }
     `}
 `

@@ -15,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
         body {
             font-family: ${theme.font.family};
             font-size: ${theme.font.sizes.medium};
+            overflow-x: hidden;
         }
         button {
             cursor: pointer;

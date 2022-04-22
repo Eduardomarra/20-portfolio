@@ -9,8 +9,14 @@ type NavigationItemProps = {
 export const Content = styled.div`
     ${({ theme }) => css`
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto 1fr;
         gap: ${theme.spacings.xxlarge};
+
+        @media screen and (max-width: 500px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: ${theme.spacings.large};
+        }
     `}
 `
 
