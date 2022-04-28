@@ -5,8 +5,8 @@ export const Wrapper = styled.footer`
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100vw;
         background: ${theme.colors.darken};
+        overflow: hidden;
     `}
 `
 
@@ -18,13 +18,10 @@ export const Content = styled.div`
         align-items: center;
         justify-content: space-between;
 
-        @media screen and (max-width: 820px) {
-            width: 700px;
-        }
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 800px) {
             flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
+            align-items: center;
+            justify-content: center;
             margin: 0 0.8px;
             width: 100vw;
         }

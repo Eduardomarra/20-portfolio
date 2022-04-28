@@ -12,7 +12,6 @@ export const Wrapper = styled.div`
         overflow: hidden;
 
         @media screen and (max-width: 400px) {
-            height: 80vh;
         }
     `}
 `
@@ -21,17 +20,15 @@ export const Content = styled.div`
         width: ${theme.grid.container};
         padding: ${theme.spacings.xlarge} 0;
 
-        @media screen and (max-width: 820px) {
-            width: 700px;
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            width: 95vw;
         }
         @media screen and (max-width: 500px) {
-            height: 80vh;
             width: 95vw;
-            margin: 0 calc(${theme.spacings.small} / 2);
+            padding: 0 0.5rem;
         }
         @media screen and (max-width: 400px) {
-            width: 95vw;
-            margin: 0 calc(${theme.spacings.small} / 2);
+            padding: 0 0.5rem;
         }
     `}
 `
@@ -91,6 +88,25 @@ export const Form = styled.div`
                 opacity: 0;
             }
         }
+
+        @media screen and (max-width: 500px) {
+            input {
+                padding: calc(${theme.spacings.xsmall} / 2);
+                font-size: ${theme.font.sizes.small};
+
+                &::placeholder {
+                    font-size: ${theme.font.sizes.small};
+                }
+            }
+
+            textarea {
+                padding: calc(${theme.spacings.xsmall} / 2);
+                font-size: ${theme.font.sizes.small};
+
+                &::placeholder {
+                    font-size: ${theme.font.sizes.small};
+            }
+        }
     `}
 `
 
@@ -107,7 +123,7 @@ export const ButtonSubmit = styled.button`
         }
 
         @media screen and (max-width: 500px) {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
     `}
 `

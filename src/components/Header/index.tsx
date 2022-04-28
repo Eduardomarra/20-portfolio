@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Content, Wrapper } from './styles'
+import { Content, Menu, Wrapper } from './styles'
 
 import { MenuDesktop } from './MenuDesktop'
 import { MenuMobile } from './MenuMobile'
@@ -13,10 +13,10 @@ export function Header() {
             <Wrapper>
                 <Content>
                     <Logo />
-                    <div className="menu">
+                    <Menu className="menu">
                         <MenuDesktop />
                         <MenuMobile />
-                    </div>
+                    </Menu>
                 </Content>
             </Wrapper>
         </>

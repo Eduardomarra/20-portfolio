@@ -7,7 +7,7 @@ export const ArrowUp = styled.div`
         justify-content: center;
         position: fixed;
         bottom: 2rem;
-        right: 5rem;
+        right: 1rem;
         width: 6rem;
         height: 6rem;
         background: ${theme.gradientColors.purple};
@@ -15,6 +15,11 @@ export const ArrowUp = styled.div`
         z-index: 99999999;
         & svg {
             color: ${theme.colors.light};
+            width: 3rem;
+            height: 4rem;
+        }
+
+        @media screen and (max-width: 500px) {
             width: 4rem;
             height: 4rem;
         }

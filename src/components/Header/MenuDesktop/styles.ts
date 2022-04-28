@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
 export const Navigation = styled.nav`
     ${({ theme }) => css`
@@ -6,16 +6,10 @@ export const Navigation = styled.nav`
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: calc(${theme.spacings.medium}*2);
-
-            @media screen and (max-width: 820px) {
-                gap: ${theme.spacings.medium};
-            }
+            gap: ${theme.spacings.small};
 
             li {
-                & + li {
-                    margin: 0 ${theme.spacings.xsmall};
-                }
+                margin-left: ${theme.spacings.small};
                 a {
                     color: ${theme.colors.grayLight};
                     font-weight: 500;
@@ -30,5 +24,34 @@ export const Navigation = styled.nav`
                 }
             }
         }
+
+        & ::after {
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color: ${theme.colors.darken};
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: ${animationLine} 2s forwards;
+        }
+
+        @media screen and (max-width: 700px) {
+            li {
+                margin-left: ${theme.spacings.xsmall};
+            }
+        }
     `}
+`
+
+const animationLine = keyframes`
+    from {
+        width: 0%;
+        background-color: #00D2DF;
+    }
+    to {
+        width: 100%;
+        background-color: #151515;
+    }
 `

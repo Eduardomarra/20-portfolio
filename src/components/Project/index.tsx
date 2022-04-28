@@ -2,7 +2,7 @@ import React from 'react'
 import { ProjectList } from '../ProjectList'
 import projectJson from '../Json/Project.json'
 
-import { Wrapper, Content } from './styles'
+import { Wrapper, Content, Titulo } from './styles'
 
 export type ProjectListProps = {
     id: number
@@ -15,9 +15,9 @@ export function Project() {
     return (
         <>
             <Wrapper id="projetos">
-                <Content>
+                <Titulo>
                     <h1>Projetos</h1>
-                </Content>
+                </Titulo>
                 <Content>
                     {projectJson.map((project: ProjectListProps) => (
                         <ProjectList key={project.id} {...project} />

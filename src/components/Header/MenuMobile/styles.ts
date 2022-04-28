@@ -9,7 +9,7 @@ export const Content = styled.nav`
         position: relative;
 
         & svg {
-            color: #fff;
+            color: ${theme.colors.light};
             width: 3rem;
             height: 3rem;
         }
@@ -21,7 +21,7 @@ export const NavigationMobile = styled.nav`
         position: absolute;
         top: 6rem;
         bottom: 0;
-        left: -8rem;
+        left: -32rem;
         right: -1rem;
         background: ${theme.colors.dark};
         z-index: 99;
@@ -31,18 +31,20 @@ export const NavigationMobile = styled.nav`
         .links.active {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-evenly;
             flex-direction: column;
-            gap: 5rem;
-            background: ${theme.colors.dark};
-            padding: ${theme.spacings.xlarge} 0;
+            background: ${theme.colors.darken};
+            padding: ${theme.spacings.medium} 0;
 
-            a {
-                color: ${theme.colors.light};
-                padding: ${theme.spacings.small} 0;
+            li {
+                margin: ${theme.spacings.small} 0;
+                a {
+                    color: ${theme.colors.light};
+                    padding: ${theme.spacings.small} 0;
 
-                &:focus {
-                    color: ${theme.colors.primary};
+                    &:focus {
+                        color: ${theme.colors.primary};
+                    }
                 }
             }
         }

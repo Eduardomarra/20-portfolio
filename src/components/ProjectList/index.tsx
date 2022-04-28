@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Projeto, Image } from './styles'
+import { Projeto, Image, Description } from './styles'
 
 import project from '../../assets/project.jpg'
 import { Button } from '../Button'
@@ -20,16 +20,18 @@ export function ProjectList({ title, description, stack }: ProjectListProps) {
                 <Image>
                     <img src={project} />
                 </Image>
-                <h2>{title}</h2>
-                <p>{description}</p>
-                <h5>{stack}</h5>
-                <Button
-                    gradientStyle="purple"
-                    href="https://www.linkedin.com/in/eduardomarra/"
-                    target="_blank"
-                >
-                    <FiLink /> Visualizar
-                </Button>
+                <Description>
+                    <h2>{title}</h2>
+                    <p>{description}</p>
+                    <h5>{stack}</h5>
+                    <Button
+                        gradientStyle="purple"
+                        href="https://www.linkedin.com/in/eduardomarra/"
+                        target="_blank"
+                    >
+                        <FiLink /> Visualizar
+                    </Button>
+                </Description>
             </Projeto>
         </>
     )

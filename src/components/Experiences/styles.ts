@@ -2,12 +2,12 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div`
     ${({ theme }) => css`
-        height: 100vh;
         background: ${theme.colors.dark};
         display: flex;
         align-items: center;
         justify-content: center;
         padding: calc(${theme.spacings.large} * 2) 0;
+        overflow: hidden;
 
         @media screen and (max-width: 500px) {
             height: auto;
@@ -20,6 +20,10 @@ export const Content = styled.div`
         display: flex;
         flex-direction: column;
         width: ${theme.grid.container};
+
+        @media screen and (max-width: 800px) {
+            margin: 0 1rem;
+        }
     `}
 `
 export const TitleExperience = styled.div`

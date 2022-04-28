@@ -5,9 +5,22 @@ export const Wrapper = styled.div`
         background: ${theme.colors.darken};
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         flex-direction: column;
-        min-height: 100vh;
+        overflow: hidden;
+        padding: 3rem 0;
+    `}
+`
+export const Titulo = styled.div`
+    ${({ theme }) => css`
+        h1 {
+            font-weight: 600;
+            font-size: ${theme.font.sizes.xlarge};
+            line-height: 2.9rem;
+            text-transform: uppercase;
+            color: ${theme.colors.light};
+            margin: 3rem 0;
+        }
     `}
 `
 
@@ -17,7 +30,6 @@ export const Content = styled.div`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: ${theme.spacings.xsmall};
-        margin: ${theme.spacings.xlarge} 0;
 
         @media screen and (max-width: 820px) {
             display: flex;
@@ -31,17 +43,6 @@ export const Content = styled.div`
             display: grid;
             grid-template-columns: auto;
             margin: 0 1rem;
-        }
-
-        h1 {
-            font-weight: 600;
-            font-size: ${theme.font.sizes.xlarge};
-            line-height: 2.9rem;
-            text-transform: uppercase;
-            color: ${theme.colors.light};
-            align-self: flex-start;
-            margin-top: ${theme.spacings.xxlarge};
-            margin-bottom: -4rem;
         }
     `}
 `

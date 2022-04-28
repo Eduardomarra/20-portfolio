@@ -3,16 +3,19 @@ import styled, { css, keyframes } from 'styled-components'
 export const Wrapper = styled.div`
     ${({ theme }) => css`
         background: ${theme.colors.dark};
-        height: 100vh;
-        max-width: 100vw;
-        overflow: hidden;
-
+        height: calc(100vh - 90px);
         display: flex;
         align-items: center;
         justify-content: center;
-
         position: relative;
         overflow: hidden;
+
+        @media screen and (max-width: 1024px) {
+            height: calc(100vh - 90px);
+        }
+        @media screen and (max-width: 500px) {
+            height: calc(100vh - 90px);
+        }
     `}
 `
 
@@ -23,6 +26,10 @@ export const Content = styled.main`
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media screen and (max-width: 800px) {
+            margin: 0 1rem;
+        }
     `}
 `
 
@@ -32,7 +39,7 @@ export const About = styled.div`
         z-index: 2;
 
         @media screen and (max-width: 759px) {
-            margin-top: 10rem;
+            margin: 0 1rem 0 1rem;
             padding: 0 calc(1.6rem / 2);
         }
 
@@ -82,7 +89,7 @@ export const ButtonWrapper = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: ${theme.spacings.medium};
+        gap: ${theme.spacings.xsmall};
         margin-top: ${theme.spacings.xxlarge};
     `}
 `
@@ -111,6 +118,6 @@ export const Vetor = styled.div`
     }
 
     @media screen and (max-width: 759px) {
-        opacity: 0.5;
+        right: -5rem;
     }
 `
